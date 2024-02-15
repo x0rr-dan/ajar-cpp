@@ -116,3 +116,4 @@ foreach ($drive in $drives) {
 Remove-Folder -Folder "C:\Backup"
 $scriptPath = $MyInvocation.MyCommand.Path
 Remove-Item -Path $scriptPath
+exit

